@@ -1,3 +1,36 @@
+let gameState = "start";
+
+let player = {
+  x: 50,
+  y: 300,
+  size: 30,
+  speed: 3
+};
+
+let monster = {
+  x: 500,
+  y: 100,
+  size: 40,
+  speed: 1.2,
+  active: false
+};
+
+let clues = [
+  { x: 150, y: 100, collected: false },
+  { x: 300, y: 250, collected: false },
+  { x: 450, y: 150, collected: false }
+];
+
+let portal = {
+  x: 550,
+  y: 320,
+  size: 50,
+  active: false
+};
+
+let score = 0;
+
+
 function setup() {
   createCanvas(400,400);
   background(225);
@@ -7,21 +40,5 @@ function setup() {
 function draw() {
 }
 
-function drawpurplerectangle() {
-}
-//DRAW THE PURPLE RECTANGLE//
-fill(111, 50,168);
-rect(100,100,200);
 
-function drawredrectangle() {
-}
-//DRAW THE RED RECTANGLE//
-fill(235,64,52);
-rect(175,200,250,50);
 
-function drawpinkcircle() {
-}
-//DRAW THE PINK CIRCLE//
-ellipseMode(CENTER);
-fill(252,3,169);
-circle(150,150,150);
