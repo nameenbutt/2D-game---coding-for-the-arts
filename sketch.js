@@ -31,13 +31,40 @@ let portal = {
 let score = 0;
 
 
-function setup() {
-  createCanvas(400,400);
-  background(225);
-  rectMode(CENTER);
+function draw() {
+  background(20, 20, 40);
+
+  if (gameState === "start") {
+    drawStartScreen();
+  } else if (gameState === "play") {
+    playGame();
+  } else if (gameState === "win") {
+    drawWinScreen();
+  } else if (gameState === "lose") {
+    drawLoseScreen();
+  }
 }
 
-function draw() {
+function drawStartScreen() {
+  fill(255, 0, 0);
+  textAlign(CENTER, CENTER);
+  textSize(36);
+  text("LOST SIGNAL", width / 2, height / 2 - 40);
+
+  fill(255);
+  textSize(18);
+  text("Find the clues before the shadow finds you", width / 2, height / 2);
+  text("Press SPACE to start", width / 2, height / 2 + 40);
+}
+
+function playGame() {
+  drawBackgroundScene();
+  movePlayer();
+  drawPlayer();
+
+  drawClues();
+  checkClueCollection();
+
 }
 
 
