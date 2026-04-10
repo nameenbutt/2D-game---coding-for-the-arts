@@ -30,6 +30,9 @@ let portal = {
 
 let score = 0;
 
+function setup() {
+  createCanvas(600, 400);
+}
 
 function draw() {
   background(20, 20, 40);
@@ -65,9 +68,7 @@ function playGame() {
   drawClues();
   checkClueCollection();
 
-}
-
- if (score >= 3) {
+  if (score >= 3) {
     monster.active = true;
     portal.active = true;
   }
@@ -83,30 +84,25 @@ function playGame() {
     checkPortalReached();
   }
 
-  fill(255);{
+  fill(255);
   textSize(16);
   textAlign(LEFT, TOP);
   text("Clues: " + score + "/3", 10, 10);
-  }
-
+}
 
 function drawBackgroundScene() {
-  // ground
   fill(30, 60, 30);
   rect(0, 300, width, 100);
 
-  // houses
   fill(50);
   rect(80, 220, 60, 80);
   rect(220, 210, 70, 90);
   rect(380, 230, 65, 70);
 
-  // windows
   fill(255, 255, 100);
   rect(95, 240, 10, 10);
   rect(115, 240, 10, 10);
 
-  // streetlight
   stroke(100);
   line(520, 180, 520, 300);
   noStroke();
@@ -116,8 +112,8 @@ function drawBackgroundScene() {
 
 function drawPlayer() {
   fill(100, 200, 255);
-  ellipse(player.x, player.y - 15, 20); // head
-  rect(player.x - 10, player.y - 5, 20, 30); // body
+  ellipse(player.x, player.y - 15, 20, 20);
+  rect(player.x - 10, player.y - 5, 20, 30);
 }
 
 function movePlayer() {
@@ -150,11 +146,11 @@ function checkClueCollection() {
 
 function drawMonster() {
   fill(0);
-  ellipse(monster.x, monster.y, monster.size);
+  ellipse(monster.x, monster.y, monster.size, monster.size);
   rect(monster.x - 10, monster.y, 20, 40);
   fill(255, 0, 0);
-  ellipse(monster.x - 7, monster.y - 5, 5);
-  ellipse(monster.x + 7, monster.y - 5, 5);
+  ellipse(monster.x - 7, monster.y - 5, 5, 5);
+  ellipse(monster.x + 7, monster.y - 5, 5, 5);
 }
 
 function moveMonster() {
@@ -231,7 +227,6 @@ function resetGame() {
 
   gameState = "start";
 }
-
 
 
 
