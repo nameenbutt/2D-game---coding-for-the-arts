@@ -280,28 +280,22 @@ function checkPortalReached() {
   }
 }
 
-
-
-
-
-
-function checkPortalReached() {
-  if (dist(player.x, player.y, portal.x, portal.y) < 35) {
-    gameState = "win";
-  }
-}
-
 function drawWinScreen() {
   background(10, 50, 25);
   fill(255);
   textAlign(CENTER, CENTER);
   textSize(34);
-  text("YOU ESCAPED THE SHADOW", width / 2, height / 2 - 30);
+  text("YOU ESCAPED THE SHADOW MONSTER", width / 2, height / 2 - 30);
 
   textSize(20);
   text("The signal is restored.", width / 2, height / 2 + 15);
-  text("Press R to play again", width / 2, height / 2 + 55);
+  text("Press R to Play Again", width / 2, height / 2 + 55);
 }
+
+
+
+
+
 
 function drawLoseScreen() {
   background(50, 0, 0);
