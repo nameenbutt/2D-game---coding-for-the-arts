@@ -71,8 +71,6 @@ function drawStartScreen() {
   text("Press SPACE to begin", width / 2, height / 2 +110);
 }
 
-
-
 function playGame() {
   drawBackgroundScene();
   drawStageText();
@@ -98,6 +96,8 @@ function playGame() {
 
   drawHUD();
 }
+
+
 
 function drawStageText() {
   fill(255);
