@@ -244,27 +244,15 @@ function drawMonster() {
   ellipse(monster.x, monster.y + 35, 50, 20);
 }
 
-
-
-function drawMonster() {
-  fill(0);
-  ellipse(monster.x, monster.y, monster.size, monster.size);
-  rect(monster.x - 12, monster.y, 24, 45);
-
-  fill(255, 0, 0);
-  ellipse(monster.x - 7, monster.y - 5, 6, 6);
-  ellipse(monster.x + 7, monster.y - 5, 6, 6);
-
-  fill(0, 0, 0, 50);
-  ellipse(monster.x, monster.y + 35, 50, 20);
-}
-
 function moveMonster() {
   if (player.x > monster.x) monster.x += monster.speed;
   if (player.x < monster.x) monster.x -= monster.speed;
-  if (player.y > monster.y) monster.y += monster.speed;
-  if (player.y < monster.y) monster.y -= monster.speed;
+  if (player.y > monster.x) monster.y += monster.speed;
+  if (player.y < monster.x) monster.y -= monster.speed;
 }
+
+
+
 
 function checkMonsterCollision() {
   if (dist(player.x, player.y, monster.x, monster.y) < 32) {
