@@ -189,16 +189,14 @@ function drawBackgroundScene() {
   ellipse(740, 180, 50);
 }
  
-
-
-function drawPlayer() {
+function drawPlayer () {
   fill(120, 200, 255);
   ellipse(player.x, player.y - 18, 20, 20);
   rect(player.x - 10, player.y - 8, 20, 30);
   line(player.x - 5, player.y + 22, player.x - 10, player.y + 35);
   line(player.x + 5, player.y + 22, player.x + 10, player.y + 35);
-  line(player.x - 10, player.y + 5, player.x - 20, player.y + 15);
-  line(player.x + 10, player.y + 5, player.x + 20, player.y + 15);
+  line(player.x - 10, player.y + 5, player.x - 20, player.y + 15); 
+  line(player.x + 10, player.y + 5, player.x + 20, player.y + 15); 
 }
 
 function movePlayer() {
@@ -222,6 +220,8 @@ function drawClues() {
     }
   }
 }
+
+
 
 function checkClueCollection() {
   for (let clue of clues) {
