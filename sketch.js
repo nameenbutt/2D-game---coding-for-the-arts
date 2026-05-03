@@ -1,6 +1,6 @@
-let gamestate = "start";
+let gameState = "start";
 
-let player ={
+let player = {
   x: 60,
   y: 320,
   size: 30,
