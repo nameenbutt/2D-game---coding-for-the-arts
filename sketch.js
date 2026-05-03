@@ -304,21 +304,6 @@ function drawLoseScreen() {
   text("Press R to try again", width / 2, height / 2 + 55);
 }
 
-
-
-
-function drawLoseScreen() {
-  background(50, 0, 0);
-  fill(255);
-  textAlign(CENTER, CENTER);
-  textSize(34);
-  text("THE SHADOW GOT YOU", width / 2, height / 2 - 30);
-
-  textSize(20);
-  text("The town is lost in darkness.", width / 2, height / 2 + 15);
-  text("Press R to try again", width / 2, height / 2 + 55);
-}
-
 function keyPressed() {
   if (gameState === "start" && key === " ") {
     gameState = "play";
@@ -349,5 +334,9 @@ function resetGame() {
 
   gameState = "start";
 }
+
+
+
+ 
 
 
