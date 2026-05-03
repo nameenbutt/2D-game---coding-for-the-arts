@@ -221,16 +221,30 @@ function drawClues() {
   }
 }
 
-
-
 function checkClueCollection() {
   for (let clue of clues) {
-    if (!clue.collected && dist(player.x, player.y, clue.x, clue.y) < 22) {
+ if(!clue.collected && dist(player.x, player.y, clue.x, clue.y) < 22) {
       clue.collected = true;
       score++;
+
     }
   }
 }
+
+function drawMonster() {
+  fill(0);
+  ellipse(monster.x, monster.y, monster.size, monster.size);
+  rect(monster.x - 12, monster.y, 24, 45);
+
+  fill(255, 0, 0);
+  ellipse(monster.x - 7, monster.y - 5, 6, 6);
+  ellipse(monster.x + 7, monster.y - 5, 6, 6);
+
+  fill(0, 0, 0, 50);
+  ellipse(monster.x, monster.y + 35, 50, 20);
+}
+
+
 
 function drawMonster() {
   fill(0);
