@@ -247,8 +247,8 @@ function drawMonster() {
 function moveMonster() {
   if (player.x > monster.x) monster.x += monster.speed;
   if (player.x < monster.x) monster.x -= monster.speed;
-  if (player.y > monster.x) monster.y += monster.speed;
-  if (player.y < monster.x) monster.y -= monster.speed;
+  if (player.y > monster.y) monster.y += monster.speed;
+  if (player.y < monster.y) monster.y -= monster.speed;
 }
 
 function checkMonsterCollision() {
@@ -259,11 +259,12 @@ function checkMonsterCollision() {
     monster.x = 500;
     monster.y = 80;
 
-    if(player.lives <= 0) {
-      gameState ="lose";
+    if (player.lives <= 0) {
+      gameState = "lose";
     }
   }
 }
+
 
 function drawPortal() {
   noFill();
