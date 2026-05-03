@@ -113,8 +113,6 @@ function drawHUD() {
   text("Stage: " + stage, 15, 65);
 }
 
-
-
 function updateStage() {
   if (score < 2) {
     stage = 1;
@@ -131,8 +129,9 @@ function updateStage() {
     message = "Stage 3: RUN! Reach the portal!";
     monster.active = true;
     portal.active = true;
+    }
   }
-}
+  
 
 function drawBackgroundScene() {
   background(20, 20, 45);
