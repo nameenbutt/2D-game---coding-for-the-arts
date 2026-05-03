@@ -16,19 +16,17 @@ let monster = {
   active: false
 };
 
-
-
 let clues = [
   { x: 120, y: 100, collected: false },
   { x: 250, y: 220, collected: false },
   { x: 420, y: 120, collected: false },
-  { x: 530, y: 250, collected: false }
+  { x: 530, y: 250, collected: false },
 ];
 
 let portal = {
   x: 550,
   y: 320,
-  size: 55,
+  size: 55, 
   active: false
 };
 
@@ -39,6 +37,8 @@ let message = "Find the missing signals...";
 function setup() {
   createCanvas(800, 500);
 }
+
+
 
 function draw() {
   background(15, 15, 35);
