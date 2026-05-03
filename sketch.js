@@ -251,7 +251,19 @@ function moveMonster() {
   if (player.y < monster.x) monster.y -= monster.speed;
 }
 
+function checkMonsterCollision() {
+  if (dist(player.x, player.y, monster.x, monster.y) < 32) {
+    player.lives--;
+    player.x = 60;
+    player.y = 320;
+    monster.x = 500;
+    monster.y = 80;
 
+    if(player.lives <= 0) {
+      gameState ="lose";
+    }
+  }
+}
 
 
 function checkMonsterCollision() {
