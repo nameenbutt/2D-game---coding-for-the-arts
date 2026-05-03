@@ -265,29 +265,25 @@ function checkMonsterCollision() {
   }
 }
 
-
-function checkMonsterCollision() {
-  if (dist(player.x, player.y, monster.x, monster.y) < 32) {
-    player.lives--;
-    player.x = 60;
-    player.y = 320;
-    monster.x = 500;
-    monster.y = 80;
-
-    if (player.lives <= 0) {
-      gameState = "lose";
-    }
-  }
-}
-
 function drawPortal() {
   noFill();
   stroke(255, 0, 100);
   strokeWeight(4);
-  ellipse(portal.x, portal.y, portal.size + sin(frameCount * 0.15) * 12);
+  ellipse(portal.x, portal.y, portal.size + sin(frameCount * 0.15) * 12 );
   ellipse(portal.x, portal.y, portal.size - 15 + sin(frameCount * 0.15) * 8);
   noStroke();
 }
+
+function checkPortalReached() {
+  if (dist(player.x, player.y, portal.x, portal.y) < 35) {
+    gameState = "win";
+  }
+}
+
+
+
+
+
 
 function checkPortalReached() {
   if (dist(player.x, player.y, portal.x, portal.y) < 35) {
