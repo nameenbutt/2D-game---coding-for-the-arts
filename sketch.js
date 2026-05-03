@@ -1,11 +1,11 @@
-let gameState = "start";
+let gamestate = "start";
 
-let player = {
+let player ={
   x: 60,
   y: 320,
   size: 30,
   speed: 3,
-  lives: 3
+  lives: 3,
 };
 
 let monster = {
@@ -15,6 +15,8 @@ let monster = {
   speed: 1.5,
   active: false
 };
+
+
 
 let clues = [
   { x: 120, y: 100, collected: false },
