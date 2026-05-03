@@ -132,7 +132,6 @@ function updateStage() {
     }
   }
   
-
 function drawBackgroundScene() {
   background(20, 20, 45);
 
@@ -159,25 +158,25 @@ function drawBackgroundScene() {
   // roofs
   fill(35);
   triangle(70, 230, 115, 190, 160, 230);
-  triangle(240, 210, 290, 170, 340, 210);
+  triangle(240, 210, 290, 170, 340, 120);
   triangle(420, 240, 475, 200, 530, 240);
-  triangle(620, 220, 667, 180, 715, 220);
+  triangle(620, 220, 667, 188, 715, 220);
 
-  // windows
-  fill(255, 255, 120);
-  rect(90, 255, 15, 15);
-  rect(120, 255, 15, 15);
-  rect(265, 240, 15, 15);
-  rect(295, 240, 15, 15);
-  rect(450, 260, 15, 15);
-  rect(480, 260, 15, 15);
-  rect(645, 245, 15, 15);
-  rect(675, 245, 15, 15);
+ // windows
+ fill(255, 255, 120);
+ rect(90, 255, 15, 15);
+ rect(120, 255, 15, 15);
+ rect(265, 240, 15, 15);
+ rect(295, 240, 15, 15);
+ rect(450, 260, 15, 15);
+ rect(480, 260, 15, 15);
+ rect(645, 245, 15, 15);
+ rect(675, 245, 15, 15);
 
   // trees
   fill(60, 35, 20);
-  rect(180, 270, 15, 60);
-  rect(570, 270, 15, 60);
+  rect(100, 270, 15, 60);
+  rect(550, 270, 25, 60);
   fill(20, 80, 30);
   ellipse(188, 250, 50, 50);
   ellipse(578, 250, 50, 50);
@@ -189,6 +188,8 @@ function drawBackgroundScene() {
   fill(255, 255, 160, 90);
   ellipse(740, 180, 50);
 }
+ 
+
 
 function drawPlayer() {
   fill(120, 200, 255);
