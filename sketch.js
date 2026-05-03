@@ -97,8 +97,6 @@ function playGame() {
   drawHUD();
 }
 
-
-
 function drawStageText() {
   fill(255);
   textAlign(CENTER, TOP);
@@ -114,6 +112,8 @@ function drawHUD() {
   text("Lives: " + player.lives, 15, 40);
   text("Stage: " + stage, 15, 65);
 }
+
+
 
 function updateStage() {
   if (score < 2) {
