@@ -38,8 +38,6 @@ function setup() {
   createCanvas(800, 500);
 }
 
-
-
 function draw() {
   background(15, 15, 35);
 
@@ -51,27 +49,29 @@ function draw() {
     drawWinScreen();
   } else if (gameState === "lose") {
     drawLoseScreen();
+    }
   }
-}
 
 function drawStartScreen() {
   background(10, 10, 30);
 
-  fill(255, 0, 50);
+  fill(255, 0,50,);
   textAlign(CENTER, CENTER);
   textSize(42);
   text("LOST SIGNAL", width / 2, height / 2 - 80);
 
   fill(255);
   textSize(20);
-  text("A strange shadow has entered the town.", width / 2, height / 2 - 20);
+  text("A strange shadow has entered the town.", width / 2, height /2 - 20);
   text("Collect all 4 clues to unlock the portal.", width / 2, height / 2 + 15);
-  text("Avoid the shadow and survive.", width / 2, height / 2 + 50);
+  text("Avoid the shadow monster and survive.", width / 2, height / 2 +50);
 
   fill(255, 220, 100);
   textSize(18);
-  text("Press SPACE to begin", width / 2, height / 2 + 110);
+  text("Press SPACE to begin", width / 2, height / 2 +110);
 }
+
+
 
 function playGame() {
   drawBackgroundScene();
